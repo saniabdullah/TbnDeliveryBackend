@@ -10,6 +10,12 @@ const cors = require('cors')
 // express app
 const app = express()
 
+app.get('/', (req, res) => {
+  res.json({
+    hello: 'hi'
+  })
+})
+
 // cors
 app.use(cors())
 
