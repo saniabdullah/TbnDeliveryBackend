@@ -40,12 +40,12 @@ app.use('/api/nomorWa', nomorRouter)
 // })
 
 // connect to db
-mongoose.connect(process.env.MONG_URI)
+mongoose.connect("mongodb+srv://abdsani:Barito07@tbndelivery.gwc2bmr.mongodb.net/?retryWrites=true&w=majority")
   .then(() => {
     console.log('connected to database')
     // listen to port
-    app.listen(process.env.PORT, () => {
-      console.log('listening for requests on port', process.env.PORT)
+    app.listen("4000", () => {
+      console.log('listening for requests on port 4000')
     })
   })
   .catch((err) => {
