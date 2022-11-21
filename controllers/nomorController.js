@@ -3,7 +3,7 @@ const mongoose = require('mongoose')
 
 // Get all nomors
 const getNomors = async (req, res) => {
-    const nomorsWa = await Nomor.find({}).sort({created: -1})
+    const nomorsWa = await Nomor.find({}).sort({name: 1})
 
     res.status(200).json(nomorsWa)
 
